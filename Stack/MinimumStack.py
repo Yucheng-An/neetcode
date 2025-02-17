@@ -12,8 +12,6 @@ class MinStack:
             minval = min(val,self.minStack[-1])
             self.stack.append(val)
             self.minStack.append(minval)
-
-
     def pop(self) -> None:
         self.stack.pop()
         self.minStack.pop()
@@ -22,3 +20,13 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.minStack[-1]
+
+
+obj = MinStack()
+obj.push(1)
+obj.push(2)
+obj.push(0)
+obj.getMin()
+obj.pop()
+obj.top()
+obj.getMin()
